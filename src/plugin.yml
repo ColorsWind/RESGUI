@@ -1,0 +1,9 @@
+name: RESGUI
+version: 0.1
+author: theTd@totemcraftmc.org
+main: org.totemcraftmc.releaseplugin.RESGUI.RESGUI
+depend: ['Residence']
+commands:
+  resgui:
+  resguiadmin:
+  resborder:
