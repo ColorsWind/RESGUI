@@ -22,13 +22,17 @@ public class PlayerUtil {
 
 	}
 
-	public static final void createLocationTeleportTask(Player p, Location loc, String name, double fee) {
+	public static final void createLocationTeleportTask(Player p, Location loc, String name,
+			double fee) {
 		// LocationPlayerTeleportTask.createNormalTask(p, loc, true, name);
 	}
 
 	public static OfflinePlayer getLocalOfflinePlayer(String name) {
+		Player exact;
+		if ((exact = Bukkit.getPlayerExact(name)) != null) {
+			return exact;
+		}
 		for (OfflinePlayer p : Bukkit.getOfflinePlayers()) {
-
 			if (p.getName().equalsIgnoreCase(name)) {
 				return p;
 			}
@@ -36,7 +40,12 @@ public class PlayerUtil {
 		}
 		return null;
 	}
+
 	public static OfflinePlayer getLocalOfflinePlayer(UUID uuid) {
+		Player exact;
+		if ((exact = Bukkit.getPlayer(uuid)) != null) {
+			return exact;
+		}
 		for (OfflinePlayer p : Bukkit.getOfflinePlayers()) {
 
 			if (p.getUniqueId().equals(uuid)) {
