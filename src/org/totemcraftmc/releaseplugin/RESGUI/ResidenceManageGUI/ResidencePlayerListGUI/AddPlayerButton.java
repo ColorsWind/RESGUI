@@ -50,14 +50,14 @@ public class AddPlayerButton extends AbstractButton {
 					p.sendMessage(ChatColor.RED + "玩家名不正确，添加失败");
 					return;
 				}
-				
-				String uuidStr = toAdd.getUniqueId().toString();
-				res.getPermissions().setPlayerFlag(uuidStr, "build", FlagState.TRUE);
-				res.getPermissions().setPlayerFlag(uuidStr, "use", FlagState.TRUE);
-				res.getPermissions().setPlayerFlag(uuidStr, "container", FlagState.TRUE);
-				res.getPermissions().setPlayerFlag(uuidStr, "attackanimals", FlagState.TRUE);
-				res.getPermissions().setPlayerFlag(uuidStr, "move", FlagState.TRUE);
-				res.getPermissions().setPlayerFlag(uuidStr, "tp", FlagState.TRUE);
+
+				String name = toAdd.getName().toLowerCase();
+				res.getPermissions().setPlayerFlag(name, "build", FlagState.TRUE);
+				res.getPermissions().setPlayerFlag(name, "use", FlagState.TRUE);
+				res.getPermissions().setPlayerFlag(name, "container", FlagState.TRUE);
+				res.getPermissions().setPlayerFlag(name, "attackanimals", FlagState.TRUE);
+				res.getPermissions().setPlayerFlag(name, "move", FlagState.TRUE);
+				res.getPermissions().setPlayerFlag(name, "tp", FlagState.TRUE);
 
 				new ResidencePlayerListGUI(getPlayer(), res).open();
 				return;
