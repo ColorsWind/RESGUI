@@ -10,10 +10,10 @@ public class Util {
 
 	public static int setTpLoc(ClaimedResidence res, Location loc) {
 		try {
-			Location tpLoc;
+//			Location tpLoc;
 			Field tpLocField = ClaimedResidence.class.getDeclaredField("tpLoc");
 			tpLocField.setAccessible(true);
-			tpLoc = (Location) tpLocField.get(res);
+//			tpLoc = (Location) tpLocField.get(res);
 			
 			if (loc == null) {
 				tpLocField.set(res, null);

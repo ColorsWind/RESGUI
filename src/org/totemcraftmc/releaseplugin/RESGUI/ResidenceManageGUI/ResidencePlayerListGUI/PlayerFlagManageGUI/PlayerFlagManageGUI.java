@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 import com.bekvon.bukkit.residence.protection.ClaimedResidence;
 
 import org.totemcraftmc.releaseplugin.RESGUI.ResidenceManageGUI.LineButton;
-import org.totemcraftmc.releaseplugin.RESGUI.ResidenceManageGUI.ResidencePlayerListGUI.PlayerFlagManageGUI.PlayerFlagSwitchButtons.AttackanimalsPlayerFlagSwitchButton;
 import org.totemcraftmc.releaseplugin.RESGUI.ResidenceManageGUI.ResidencePlayerListGUI.PlayerFlagManageGUI.PlayerFlagSwitchButtons.BuildPlayerFlagSwtichButton;
 import org.totemcraftmc.releaseplugin.RESGUI.ResidenceManageGUI.ResidencePlayerListGUI.PlayerFlagManageGUI.PlayerFlagSwitchButtons.ContainerPlayerFlagSwitchButton;
 import org.totemcraftmc.releaseplugin.RESGUI.ResidenceManageGUI.ResidencePlayerListGUI.PlayerFlagManageGUI.PlayerFlagSwitchButtons.MovePlayerFlagSwitchButton;
