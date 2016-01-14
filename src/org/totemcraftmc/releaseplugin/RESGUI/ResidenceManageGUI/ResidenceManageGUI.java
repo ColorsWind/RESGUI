@@ -20,6 +20,7 @@ public class ResidenceManageGUI extends AbstractGUI {
 //		registerButton(new AttackanimalsFlagSwitchButton(this, res), 3);
 		registerButton(new MoveFlagSwitchButton(this, res), 3);
 		registerButton(new TpFlagSwitchButton(this, res), 4);
+		registerButton(new PVPFlagSwitchButton(this, res), 5);
 //		registerButton(new HopperMinecartFlagSwitchButton(this, res), 6);
 
 		registerButton(new MonstersFlagSwtichButton(this, res), 9);

@@ -21,11 +21,11 @@ public abstract class AbstractPlayerFlagSwitchButton extends AbstractButton {
 
 	protected final ClaimedResidence res;
 	protected final String playerName;
-	protected final String uuid;
+//	protected final String uuid;
 	public AbstractPlayerFlagSwitchButton(AbstractGUI gui,String uuid, String playerName, ClaimedResidence res) {
 		super(gui);
 		this.res = res;
-		this.uuid = uuid;
+//		this.uuid = uuid;
 		this.playerName = playerName;
 	}
 
@@ -40,7 +40,7 @@ public abstract class AbstractPlayerFlagSwitchButton extends AbstractButton {
 			return new InventoryInteractResponse(Type.Close, null);
 		}
 		
-		res.getPermissions().setPlayerFlag(uuid, getFlagString(), (playerHasFlag())?FlagState.FALSE:FlagState.TRUE);
+		res.getPermissions().setPlayerFlag(playerName.toLowerCase(), getFlagString(), (playerHasFlag())?FlagState.FALSE:FlagState.TRUE);
 		
 		return new InventoryInteractResponse(Type.RefreshButton, null);
 	}
@@ -78,7 +78,7 @@ public abstract class AbstractPlayerFlagSwitchButton extends AbstractButton {
 	}
 	
 	protected boolean playerHasFlag(){
-		return res.getPermissions().playerHas(uuid, getFlagString(), false);
+		return res.getPermissions().playerHas(playerName.toLowerCase(), getFlagString(), false);
 	}
 	
 	public abstract String getFlagString();
